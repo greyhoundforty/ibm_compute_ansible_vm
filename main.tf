@@ -1,3 +1,7 @@
+data "ibm_compute_ssh_key" "deploymentKey" {
+  label = "ryan_tycho"
+}
+
 resource "ibm_compute_vm_instance" "ansible_node" {
   count                = "${var.node_count}"
   hostname             = "${var.hostname}-${count.index+1}"
