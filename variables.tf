@@ -48,13 +48,11 @@ variable user_metadata {
   default = ""
 }
 
-variable transient {
-  type    = "string"
-  default = ""
-}
 
 variable localdisk {
   type    = "string"
   default = ""
 }
 
+variable ssh_key_ids {}
+variable tags {}

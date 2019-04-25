@@ -1,5 +1,4 @@
 resource "ibm_compute_vm_instance" "ansible_node" {
-  transient            = "${var.transient}"
   count                = "${var.node_count}"
   hostname             = "${var.hostname}-${count.index+1}"
   domain               = "${var.domain}"
@@ -11,6 +10,6 @@ resource "ibm_compute_vm_instance" "ansible_node" {
   user_metadata        = "${var.user_metadata}"
   flavor_key_name      = "${var.flavor_key_name}"
   local_disk           = "${var.localdisk}"
-  tags = []
-  ssh_key_ids = []
+  tags                 = ""
+  ssh_key_ids          = ""
 }
