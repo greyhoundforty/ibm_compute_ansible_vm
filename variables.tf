@@ -48,9 +48,7 @@ variable user_metadata {
   default = ""
 }
 
-
 variable localdisk {
   type    = "string"
   default = ""
 }
-

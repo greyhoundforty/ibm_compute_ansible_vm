@@ -15,5 +15,5 @@ resource "ibm_compute_vm_instance" "ansible_node" {
   flavor_key_name      = "${var.flavor_key_name}"
   local_disk           = "${var.localdisk}"
   tags                 = ["ryantiffany", "ansible-node"]
-  ssh_key_ids = ["${data.ibm_compute_ssh_key.deploymentKey.id}"]
+  ssh_key_ids          = ["${data.ibm_compute_ssh_key.deploymentKey.id}"]
 }
